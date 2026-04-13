@@ -1,0 +1,13 @@
+{application, oas_util, [
+    {description, "An OTP library"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {applications, [
+        kernel,
+        stdlib
+    ]},
+    {env, []},
+    {modules, []},
+    {licenses, ["MIT"]},
+    {links, ["https://github.com/leonardb/oas_util"]}
+ ]}.
