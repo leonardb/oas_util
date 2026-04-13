@@ -2,18 +2,18 @@
 
 -module(oas_format).
 -export([
-    validate_format/2,
-    known_formats/0
+    validate/2,
+    list_known/0
 ]).
 
 %% Returns a list of supported OpenAPI format names
-known_formats() ->
+list_known() ->
     [email, uuid, date, date_time, ipv4, ipv6, hostname, uri, password, byte, int32, int64, float, double, binary, time].
 
 %% Returns the regex pattern (as a binary) for a given OpenAPI format atom
 
--spec validate_format(atom(), binary()) -> boolean().
-validate_format(Format, Value) ->
+-spec validate(atom(), binary()) -> boolean().
+validate(Format, Value) ->
     case get_pattern(Format) of
         {error, _} = Err ->
             Err;

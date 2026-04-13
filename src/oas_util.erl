@@ -45,10 +45,10 @@ compile_pattern(Pattern, Strict) ->
 Check if a values is valid for a given OpenAPI format
 """.
 validate_format(Format, Value) ->
-    oas_format:validate_format(Format, Value).
+    oas_format:validate(Format, Value).
 
 -doc """
 List all known OpenAPI formats
 """.
 known_formats() ->
-    oas_format:known_formats().
+    oas_format:list_known().
